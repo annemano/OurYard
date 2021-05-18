@@ -11,10 +11,10 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
-    @user = User.find(params[:user_id])
+    @user = current_user
     @listing.user = @user
     if @listing.save
-      redirect_to listings_path
+      redirect_to root_path
     else
       render :new
     end
@@ -28,10 +28,10 @@ class ListingsController < ApplicationController
 
   def update
     @listing.update(listing_params)
-    @user = User.find(params[:user_id])
+    @user = current_user
     @listing.user = @user
     if @listing.save
-      redirect_to listings_path
+      redirect_to root_path
     else
       render :edit
     end
@@ -49,6 +49,6 @@ class ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:list).permit(:title, :description, :address, :price_per_hour, :photo)
+    params.require(:listing).permit(:title, :description, :address, :price_per_hour, :photo)
   end
 end
