@@ -1,0 +1,39 @@
+.listings_header {
+  padding: 100px
+}
+
+.cards_listing_container {
+  // display: flex;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.card_listing {
+  display: flex;
+  background-color: white;
+  padding: 16px 16px;
+  border-radius: 8px;
+}
+
+.listing_img {
+  flex: 40%;
+}
+
+
+.listing_img img {
+  height: 300px;
+  border-radius: 8px;
+}
+
+.listing_text {
+  flex: 50%;
+  margin-left: 16px;
+}
+
+.listing_price {
+  flex: 10%;
+  // align-items: flex-end;
+  // justify-content: end;
+  align-self: flex-end;
+}
+
