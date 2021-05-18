@@ -1,0 +1,22 @@
+.listings_header {
+  padding: 100px
+}
+
+.cards_listing_container {
+  // display: flex;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  // width: 100%;
+}
+
+.listing_img img {
+  height: 300px;
+  flex: 30%;
+}
+
+.listing_text {
+  flex: 70%;
+}
