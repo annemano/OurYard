@@ -28,11 +28,8 @@ class ListingsController < ApplicationController
   end
 
   def update
-    @listing.update(listing_params)
-    @user = current_user
-    @listing.user = @user
-    if @listing.save
-      redirect_to root_path
+    if @listing.update(listing_params)
+      redirect_to listing_path(@booking)
     else
       render :edit
     end
