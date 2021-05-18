@@ -28,7 +28,7 @@ class ListingsController < ApplicationController
 
   def update
     @listing.update(listing_params)
-    @user = User.find(params[id])
+    @user = User.find(params[:id])
     @listing.user = @user
     if @listing.save
       redirect_to listings_path
