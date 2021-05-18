@@ -20,7 +20,7 @@
 
     <div class="card_listing">
       <div class="listing_img">
-        <%= cl_image_tag listing.photo.key, height: 300, width: 450, crop: :fill %>
+        <%= cl_image_tag listing.photo.key, crop: :thumb %>
         <!-- <img src=@listing.photo.key /> -->
       </div>
       <div class="listing_text">

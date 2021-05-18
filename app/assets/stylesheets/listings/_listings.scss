@@ -16,18 +16,22 @@
 }
 
 .listing_img {
-  flex: 40%;
+  height: 100%;
+  flex: 50%;
+  // flex-shrink: 0;
 }
 
 
 .listing_img img {
   height: 300px;
+  width: 100%;
   border-radius: 8px;
 }
 
 .listing_text {
   flex: 50%;
   margin-left: 24px;
+
 }
 
 .listing_price {
