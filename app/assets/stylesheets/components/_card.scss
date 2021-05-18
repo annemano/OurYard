@@ -1,0 +1,48 @@
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-yard {
+  margin-top: 8px;
+  width: 30%;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-yard > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-yard h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-yard p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-yard .card-yard-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-yard-infos .card-yard-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+
