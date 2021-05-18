@@ -24,6 +24,11 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+# Manage secret keys
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Picture uploading
+gem 'cloudinary', '~> 1.16.0'
 
 # Integrate User model with Devise
 gem 'devise'
