@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2021_05_18_150831) do
 
   create_table "listings", force: :cascade do |t|
     t.string "title"
-    t.string "description"
+    t.text "description"
     t.string "address"
-    t.integer "price_per_hour"
-    t.integer "avg_rating"
+    t.float "price_per_hour"
+    t.float "avg_rating"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
