@@ -13,3 +13,18 @@
 @import "pages/index";
 
 @import "listings/index";
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  margin-top: 32px;
+  flex-shrink: 0;
+}

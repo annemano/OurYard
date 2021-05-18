@@ -1,4 +1,3 @@
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1585917641362-9fbb6fcfc371?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1564&q=80);">
   <div class="container">
     <h1>OurYard brings you the perfect outdoor space, no matter the occasion.</h1>
@@ -8,79 +7,21 @@
   </div>
 </div>
 <div>
-  <%= link_to 'Create a new listing', new_listing_path %>
+  <%= link_to 'Create a new listing', new_listing_path, class: 'btn btn-primary m-2' %>
 </div>
 <!-- Cards -->
 <div class="card_container">
-  <div class="card-yard">
-    <img src="https://images.unsplash.com/photo-1602537675897-1285bfbcd014?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1460&q=80" />
-    <div class="card-yard-infos">
-      <div>
-        <h2>Retreat in Plateau</h2>
-        <p>Cozy escape!</p>
-      </div>
-      <h2 class="card-yard-pricing">$32</h2>
-      <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-    </div>
-  </div>
-
-  <div class="card-yard">
-    <img src="https://assets-news.housing.com/news/wp-content/uploads/2021/03/24164622/Tips-to-set-up-your-own-backyard-garden-FB-1200x700-compressed.jpg" />
-    <div class="card-yard-infos">
-      <div>
-        <h2>Best yard in Outremont</h2>
-        <p>For up to 20 people</p>
-      </div>
-      <h2 class="card-yard-pricing">$25</h2>
-      <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-    </div>
-  </div>
-
-  <div class="card-yard">
-    <img src="https://i.pinimg.com/originals/76/73/33/767333553e8b6ff80cf69649b76675dc.jpg" />
-    <div class="card-yard-infos">
-      <div>
-        <h2>Oasis in Little Italy</h2>
-        <p>Outdoor fridge to keep your drinks cool!</p>
-      </div>
-      <h2 class="card-yard-pricing">$26</h2>
-      <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-    </div>
-  </div>
-
+  <% @listings.each do |listing| %>
     <div class="card-yard">
-    <img src="https://i.pinimg.com/originals/17/38/05/173805f409c73655094241a0ddb844e7.jpg" />
-    <div class="card-yard-infos">
-      <div>
-        <h2>Yard with pool</h2>
-        <p>Swim with your friends!</p>
+      <%= cl_image_tag(listing.photo.key, alt: "", crop: :thumb) %>
+      <div class="card-yard-infos">
+        <div>
+          <h2><%= listing.title %></h2>
+          <p><%= listing.description %></p>
+        </div>
+        <h2 class="card-yard-pricing"><%= "$#{listing.price_per_hour}/hour" %></h2>
+        <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
       </div>
-      <h2 class="card-yard-pricing">$32</h2>
-      <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
     </div>
-  </div>
-
-  <div class="card-yard">
-    <img src="https://lh3.googleusercontent.com/proxy/MpXwo1r-rqHgqjFto55ZMk2ue9So0U_5rV8WDvNuZRQGBY3peBq5FezpIm0ZB549RPF2XHJf9oP6rhWRBES6wr5iivPMLu0DH1KeLaOSaJZ0u0VMNyY" />
-    <div class="card-yard-infos">
-      <div>
-        <h2>Perfect date spot</h2>
-        <p>This quiet space if perfect for a romantic dinner</p>
-      </div>
-      <h2 class="card-yard-pricing">$32</h2>
-      <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-    </div>
-  </div>
-
-  <div class="card-yard">
-    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F07%2F16%2FLiu-family-sitting-in-back-garden-august-2020-magazine.jpg" />
-    <div class="card-yard-infos">
-      <div>
-        <h2>Mile end retreat</h2>
-        <p>Relax in the center of it all!</p>
-      </div>
-      <h2 class="card-yard-pricing">$32</h2>
-      <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-    </div>
-  </div>
+  <% end %>
 </div>
