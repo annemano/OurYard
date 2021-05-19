@@ -1,0 +1,23 @@
+<div class="container my-5">
+  <h2>My bookings </h2>
+  <div class="row">
+    <div class="col-9">
+      <% current_user.bookings.each do |booking| %>
+        <div class="card-booking my-3">
+          <%= cl_image_tag booking.listing.photo.key %>
+          <div class="card-booking-infos p-3">
+            <h2><%= booking.listing.title %></h2>
+            <p>Total price: $ <%= (booking.end_date - booking.start_date) / 6000 * booking.listing.price_per_hour %> </p>
+            <p>Dates: <%= booking.start_date.strftime("%b %e, %l:%M %p") %> - <%= booking.end_date.strftime("%b %e, %l:%M %p") %></p>
+            <p>Occupancy: <%= booking.occupancy %></p>
+            <p>Status: <strong><%= booking.status.capitalize %></strong></p>
+            <%= link_to booking_path(booking), method: :delete, data: { confirm: 'Are you sure you want to cancel?' } do %>
+              <i class="far fa-calendar-times"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
