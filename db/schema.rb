@@ -45,12 +45,13 @@ ActiveRecord::Schema.define(version: 2021_05_19_150937) do
 
   create_table "bookings", force: :cascade do |t|
     t.string "status", default: "pending"
-    t.time "start_date"
-    t.time "end_date"
     t.bigint "listing_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "occupancy"
     t.index ["listing_id"], name: "index_bookings_on_listing_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
