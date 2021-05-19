@@ -44,11 +44,13 @@ class BookingsController < ApplicationController
   def confirm
     @booking = Booking.find(params[:id]) # to be checked whether this is the right params
     @booking.update(status: "confirmed")
+    redirect_to my_listings_path
   end
 
   def reject
     @booking = Booking.find(params[:id]) # to be checked whether this is the right params
     @booking.update(status: "rejected")
+    redirect_to my_listings_path
   end
 
   private
