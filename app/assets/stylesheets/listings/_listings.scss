@@ -1,6 +1,16 @@
 .listings_header {
   padding: 100px;
   background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.listings_header h1 {
+  font-family: 'Roboto';
+}
+
+.listings_header p {
+  font-family: 'Open-Sans';
+  font-size: 24px;
 }
 
 .cards_listing_container {
@@ -10,15 +20,22 @@
 }
 
 .card_listing {
+  position: relative;
   display: flex;
   background-color: white;
   padding: 16px 16px;
   border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .listing_img {
   height: 100%;
   flex: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   // flex-shrink: 0;
 }
 
@@ -32,7 +49,13 @@
 .listing_text {
   flex: 50%;
   margin-left: 24px;
-
+  h2 {
+    font-family: 'Roboto';
+  }
+  p {
+    font-family: 'Open-Sans';
+    font-size: 20px;
+  }
 }
 
 .listing_price {
@@ -47,9 +70,23 @@
 }
 
 .map-container {
+  background-color: white;
+  margin-right: 16px;
   height: 100vh;
   position: sticky;
   top: 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-
+.more-info-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-weight: bold;
+  background-color: #0296F2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  &:hover {
+    background-color: #014B7A;
+  }
+}

@@ -14,14 +14,6 @@
 
 @import "listings/index";
 
-body {
-  font-family: $body-font;
-  background-color: $light-gray;
-}
-
-body h1, h2, h3 {
-  font-family: $headers-font;
-}
 
 html, body {
   height: 100%;
