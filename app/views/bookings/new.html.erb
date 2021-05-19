@@ -1,6 +1,6 @@
 <%= simple_form_for [@listing, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-  <%= f.input :occupancy %>
+  <%= f.input :occupancy, label: "Number of guests" %>
   <%= f.submit "Send booking request" %>
 <% end %>

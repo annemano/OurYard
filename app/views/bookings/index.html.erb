@@ -1,0 +1,14 @@
+<h2>My bookings </h2>
+<% current_user.bookings.each do |booking| %>
+
+  <div class="card-booking">
+    <%= cl_image_tag booking.listing.photo.key %>
+    <div class="card-booking-infos">
+      <h2><%= booking.listing.title %></h2>
+      <p>Dates: <%= booking.start_date %> - <%= booking.end_date %></p>
+      <p>Occupancy: <%= booking.occupancy %></p>
+      <p>Status: <%= booking.status %></p>
+    </div>
+  </div>
+
+<% end %>
