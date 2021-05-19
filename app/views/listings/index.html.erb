@@ -4,8 +4,8 @@
     <div class="listings_header mb-3">
       <p>100+ yards available for your search</p>
       <h1><strong>Yards in Montreal</strong></h1>
-      <p>filters:</p>
-    </div>
+<!--       <p>filters:</p>
+ --></div>
     <!--  -->
 
     <!-- Build drop downs/interface for filtering results -->
@@ -27,7 +27,7 @@
             <hr>
           </div>
           <div class="listing_price">
-            <h3><strong>$<%= listing.price_per_hour %>0/hour</strong></h3>
+            <h3>$<%= listing.price_per_hour %>0/hour</h3>
           </div>
           <%= link_to "more info", listing_path(listing), class: 'btn btn-primary more-info-btn' %>
         </div>

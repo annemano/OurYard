@@ -5,12 +5,11 @@
 }
 
 .listings_header h1 {
-  font-family: 'Roboto';
+  font-size: 24px;
 }
 
 .listings_header p {
-  font-family: 'Open-Sans';
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .cards_listing_container {
@@ -49,12 +48,11 @@
 .listing_text {
   flex: 50%;
   margin-left: 24px;
-  h2 {
-    font-family: 'Roboto';
+  h2, h3 {
+    font-size: 24px;
   }
-  p {
-    font-family: 'Open-Sans';
-    font-size: 20px;
+  p, a {
+    font-size: 16px;
   }
 }
 
@@ -83,6 +81,7 @@
   right: 8px;
   top: 8px;
   font-weight: bold;
+  border: none;
   background-color: #0296F2;
   padding: 8px 16px;
   border-radius: 8px;
