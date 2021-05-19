@@ -1,0 +1,58 @@
+<div class="container">
+
+  <!-- Header Text -->
+  <div class="show_header">
+    <div class="show_header_main_text">
+      <h1><%= @listing.title %></h1>
+      <p><%= @listing.address %></p>
+    </div>
+    <div class="show_header_back">
+      <%= link_to "Back to Results", listings_path, class:'btn btn-outline-primary'%>
+    </div>
+  </div>
+
+  <!-- Banner with images -->
+
+  <div class="show_image_banner">
+    <%= cl_image_tag @listing.photo.key %>
+
+  </div>
+
+  <!-- 2 column layout with details on left, booking form on right -->
+  <div class="two_column_container">
+    <div class="details_column">
+      <div class="details_header">
+        <div class="details_header_text">
+          <h2>Yard details</h2>
+          <p>Hosted by <%= @listing.user_id %></p>
+        </div>
+        <div class="details_header_avatar">
+          <%= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621440517/CchkFLfP_400x400_tf89lb.jpg", class: "avatar-large" %>
+        </div>
+      </div>
+      <hr>
+
+      <p><%= @listing.description %></p>
+      <hr>
+      <h2>Amenities</h2>
+      <i class="fas fa-user-friends"></i><p>Maximum capacity: 8 people</p>
+      <i class="fas fa-restroom"></i><p>Restroom available</p>
+      <i class="fas fa-parking"></i><p>Parking for one vehicle</p>
+      <i class="fas fa-plug"></i><p>Electrical outlets available</p>
+
+      <hr>
+      <br>
+
+      <div class="show_map">
+        <h2>Location:</h2>
+        <img src="https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621438813/Screen_Shot_2021-05-19_at_11.37.57_AM_fwqjrv.png" alt="">
+      </div>
+    </div>
+
+    <div class="booking_column">
+      <h2>booking form here</h2>
+      <p>Average rating: <%= @listing.avg_rating  %></p>
+    </div>
+  </div>
+
+</div>
