@@ -25,6 +25,13 @@
   border-radius: 8px;
 }
 
+.form_centered {
+  margin: 16px 0px 16px 0px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px 0px 16px 0px;
+}
+
 .two_column_container {
   margin-top: 16px;
   display: flex;
@@ -40,18 +47,20 @@
 
 .booking_column {
   width: 30%;
-  background-color: white;
+  background-image: url(https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621438813/Screen_Shot_2021-05-19_at_11.37.57_AM_fwqjrv.png);
+  background-size: cover;
   border-radius: 8px;
   padding: 16px 16px;
   box-shadow: 4px 4px 16px rgb(200, 200, 200);
 }
 
-.show_map img {
-  width: 100%;
-  flex-shrink: 1;
-  object-fit: cover;
-  border-radius: 8px;
-}
+// .booking_column img {
+//   width: 100%;
+//   // height: 100%;
+//   // flex-shrink: 1;
+//   object-fit: cover;
+//   border-radius: 8px;
+// }
 
 .details_header {
   display: flex;
