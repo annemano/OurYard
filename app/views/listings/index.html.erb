@@ -1,39 +1,44 @@
-<!-- Header -->
-<div class="container">
 
-<div class="listings_header">
-  <p>100+ yards available for your search</p>
-  <h1><strong>Yards in Montreal</strong></h1>
-  <p>filters:</p>
-  <div class="listings_dropdowns">
-    <!-- Build drop downs/interface for filtering results -->
-  </div>
-</div>
-
-<!-- Cards -->
-<div class="cards_listing_container">
-
-
-  <% @listings.each do |listing| %>
-
-    <hr>
-
-    <div class="card_listing">
-      <div class="listing_img">
-        <%= cl_image_tag listing.photo.key, crop: :thumb %>
-        <!-- <img src=@listing.photo.key /> -->
-      </div>
-      <div class="listing_text">
-        <h2><%= listing.title %></h2>
-        <p><%= listing.description %></p>
-        <p><strong>Average rating: <%= listing.avg_rating %></strong></p>
-        <hr>
-      </div>
-      <div class="listing_price">
-        <h3><strong>$<%= listing.price_per_hour %>0/hour</strong></h3>
-      </div>
+<div class="main-container">
+  <div class="container content-container my-3" style="border: 1px solid red;">
+    <!-- Header -->
+    <div class="listings_header mb-3" style="border: 1px solid blue;">
+      <p>100+ yards available for your search</p>
+      <h1><strong>Yards in Montreal</strong></h1>
+      <p>filters:</p>
     </div>
+    <!--  -->
 
+    <!-- Build drop downs/interface for filtering results -->
+    <div class="listings_dropdowns" style="background-color: blue;">
+    </div>
+    <!--  -->
 
-  <% end %>
+    <!-- Cards -->
+    <div class="cards_listing_container">
+      <% @listings.each do |listing| %>
+        <div class="card_listing">
+          <div class="listing_img">
+            <%= cl_image_tag listing.photo.key, crop: :thumb %>
+          </div>
+          <div class="listing_text">
+            <h2><%= listing.title %></h2>
+            <p><%= listing.description %></p>
+            <p><strong>Average rating: <%= listing.avg_rating %></strong></p>
+            <hr>
+          </div>
+          <div class="listing_price">
+            <h3><strong>$<%= listing.price_per_hour %>0/hour</strong></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="container map-container my-3 p-3 border">
+    <div id="map"
+         style="width: 100%; height: 100%;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 </div>
