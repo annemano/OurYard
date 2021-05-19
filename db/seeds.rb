@@ -63,3 +63,71 @@ listing6 = Listing.create!(
   user_id: 1)
 listing6.photo.attach(io: file6, filename: 'yard6.jpg', content_type: 'image/jpg')
 
+file7 = URI.open("https://unilock.com/wp-content/uploads/2020/07/Patio_0797-1300x649.jpg")
+listing7 = Listing.create!(
+  title: 'Luxury BBQ backyard',
+  description: "Grill, Laugh & Enjoy!",
+  address: '1326 Ontario St E, Montreal',
+  price_per_hour: 31,
+  avg_rating: 4.6,
+  user_id: 1)
+listing7.photo.attach(io: file7, filename: 'yard7.jpg', content_type: 'image/jpg')
+
+file8 = URI.open("https://i.pinimg.com/564x/46/95/2a/46952a854f27e039c95c5add38692b94.jpg")
+listing8 = Listing.create!(
+  title: 'Fireplace Paradise',
+  description: "Host a party with big field and a custom fireplace",
+  address: '1550 Ave Papinea, Montreal',
+  price_per_hour: 38,
+  avg_rating: 4.1,
+  user_id: 1)
+listing8.photo.attach(io: file8, filename: 'yard8.jpg', content_type: 'image/jpg')
+
+file9 = URI.open("https://i2.wp.com/www.gardeningchannel.com/wp-content/uploads/2020/09/gardeningchannel-backyard-patio-ideas.jpg?fit=730%2C400&ssl=1")
+listing9 = Listing.create!(
+  title: 'Romance the night away...',
+  description: "Beautiful night patio for any special romantic dates",
+  address: '5550 Rue Fullum, Montreal',
+  price_per_hour: 38,
+  avg_rating: 4.1,
+  user_id: 1)
+listing9.photo.attach(io: file9, filename: 'yard9.jpg', content_type: 'image/jpg')
+
+file10 = URI.open("https://cdn.onekindesign.com/wp-content/uploads/2018/05/Patio-Ideas-for-Outdoor-Living-Entertaining-03-1-Kindesign.jpg")
+listing10 = Listing.create!(
+  title: 'Enjoy own SPA!!',
+  description: "Enjoy the wooden patio chairs with your own spa",
+  address: '6789 1ere Ave, Montreal',
+  price_per_hour: 50,
+  avg_rating: 4.7,
+  user_id: 1)
+listing10.photo.attach(io: file10, filename: 'yard10.jpg', content_type: 'image/jpg')
+
+file11 = URI.open("https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2018/1/12/0/OA18-Surrounds-Landscape-Architecture_Heated-Cabana-Koi-Pond_1.jpg.rend.hgtvcom.966.644.suffix/1515774719745.jpeg")
+listing11 = Listing.create!(
+  title: 'Magical Backyard',
+  description: "Welcome to your magical forest",
+  address: '6790 1ere Ave, Montreal',
+  price_per_hour: 55,
+  avg_rating: 4.9,
+  user_id: 1)
+listing11.photo.attach(io: file11, filename: 'yard11.jpg', content_type: 'image/jpg')
+
+file12 = URI.open("https://i2.wp.com/www.gardeningchannel.com/wp-content/uploads/2020/09/gardeningchannel-dine-al-fresco.jpg?resize=600%2C595&ssl=1")
+listing12 = Listing.create!(
+  title: 'Grill Patio Dream',
+  description: "Host the best party in town...outside!",
+  address: '66769 2e Av., Montreal',
+  price_per_hour: 55,
+  avg_rating: 4.9,
+  user_id: 1)
+listing12.photo.attach(io: file12, filename: 'yard12.jpg', content_type: 'image/jpg')
+
+
+
+
+
+
+
+
+
