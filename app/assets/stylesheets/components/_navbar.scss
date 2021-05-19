@@ -1,3 +1,7 @@
+.navbar {
+  height: 8vh;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -8,5 +12,9 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
+}
+
+.nav-link {
+  font-weight: bold;
 }
