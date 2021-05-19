@@ -1,5 +1,6 @@
 .listings_header {
-  padding: 100px
+  padding: 100px;
+  background-color: white;
 }
 
 .cards_listing_container {
@@ -40,4 +41,15 @@
   // justify-content: end;
   align-self: flex-end;
 }
+
+.main-container {
+  display: flex;
+}
+
+.map-container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
 

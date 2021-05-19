@@ -13,15 +13,15 @@ listing1 = Listing.create!(
   user_id: 1)
 listing1.photo.attach(io: file1, filename: 'yard1.jpg', content_type: 'image/jpg')
 
-file2 = URI.open('https://assets-news.housing.com/news/wp-content/uploads/2021/03/24164622/Tips-to-set-up-your-own-backyard-garden-FB-1200x700-compressed.jpg')
-listing2 = Listing.create!(
-  title: 'Best yard in Outremont',
-  description: "For up to 20 people",
-  address: '176 Saint Viateur West Street, Montreal',
-  price_per_hour: 25,
-  avg_rating: 3.9,
-  user_id: 1)
-listing2.photo.attach(io: file2, filename: 'yard2.jpg', content_type: 'image/jpg')
+# file2 = URI.open('https://assets-news.housing.com/news/wp-content/uploads/2021/03/24164622/Tips-to-set-up-your-own-backyard-garden-FB-1200x700-compressed.jpg')
+# listing2 = Listing.create!(
+#   title: 'Best yard in Outremont',
+#   description: "For up to 20 people",
+#   address: '176 Saint Viateur West Street, Montreal',
+#   price_per_hour: 25,
+#   avg_rating: 3.9,
+#   user_id: 1)
+# listing2.photo.attach(io: file2, filename: 'yard2.jpg', content_type: 'image/jpg')
 
 file3 = URI.open('https://i.pinimg.com/originals/76/73/33/767333553e8b6ff80cf69649b76675dc.jpg')
 listing3 = Listing.create!(
