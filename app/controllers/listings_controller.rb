@@ -50,6 +50,9 @@ class ListingsController < ApplicationController
     redirect_to listings_path
   end
 
+  def my_listings
+  end
+
   private
 
   def set_listing
