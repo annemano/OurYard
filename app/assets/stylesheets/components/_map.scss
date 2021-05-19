@@ -3,6 +3,27 @@
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mapboxgl-popup-content p {
+  font-family: 'Open-Sans', sans-serif;
+  font-size: 16px;
+  color: #525252;
+}
+
+.mapboxgl-popup-content a {
+  font-family: 'Open-Sans', sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  background-color: #0296F2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  &:hover {
+    background-color: #014B7A;
+  }
 }

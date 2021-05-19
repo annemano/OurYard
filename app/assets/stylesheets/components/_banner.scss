@@ -5,6 +5,7 @@
 }
 
 .banner h1 {
+  font-family: 'Roboto';
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -13,8 +14,19 @@
 }
 
 .banner p {
+  font-family: 'Open-Sans';
+  color: #DBDBDB;
   font-size: 20px;
-  color: white;
-  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 8px;
+}
+
+.banner a {
+  font-weight: bold;
+  background-color: #0296F2;
+  padding: 8px 32px;
+  border-radius: 16px;
+  &:hover {
+    background-color: #014B7A;
+  }
 }
