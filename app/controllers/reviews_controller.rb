@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
     @review.booking = @booking
     @listing = @booking.listing
     if @review.save
+      modify_avg_rating(@listing)
       redirect_to listing_path(@listing)
     else
       render :new
@@ -17,6 +18,13 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def modify_avg_rating(listing)
+    sum = 0
+    listing.reviews.each { |review| sum += review.rating }
+    avg = (sum / listing.reviews.length.to_f)
+    listing.update(avg_rating: avg.round(2))
+  end
 
   def review_params
     params.require(:review).permit(:rating, :comment)

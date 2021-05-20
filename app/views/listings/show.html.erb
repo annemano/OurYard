@@ -83,3 +83,14 @@
   </div>
 
 </div>
+
+<hr>
+<div class="container">
+  <h2>Reviews (Average Rating: <%= @listing.avg_rating %>)</h2>
+  <% @listing.reviews.each do |review| %>
+    <p>From: <%= review.booking.user.first_name %></p>
+    <p>Rating: <%= review.rating %></p>
+    <p>Comment: <%= review.comment %></p>
+    <hr>
+  <% end %>
+</div>
