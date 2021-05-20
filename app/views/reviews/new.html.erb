@@ -1,6 +1,13 @@
-<%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :rating %>
-  <%= f.input :comment %>
-  <%= f.input :booking, :as => :hidden, :input_html => { :value => "#{@booking}" } %>
-  <%= f.submit 'Save review', class: "btn btn-success"%>
-<% end %>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <h2 class="my-3">Rate your stay at <%= @booking.listing.title %></h2>
+      <%= simple_form_for [@booking, @review] do |f| %>
+        <%= f.input :rating %>
+        <%= f.input :comment %>
+        <%= f.input :booking, :as => :hidden, :input_html => { :value => "#{@booking}" } %>
+        <%= f.submit 'Save review', class: "btn btn-success"%>
+      <% end %>
+    </div>
+  </div>
+</div>

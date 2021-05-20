@@ -11,12 +11,9 @@
             <p><strong>Dates: </strong> <%= booking.start_date.strftime("%b %e, %l:%M %p") %> - <%= booking.end_date.strftime("%b %e, %l:%M %p") %></p>
             <p><strong>Occupancy: </strong><%= booking.occupancy %></p>
             <p><strong>Status: </strong><em><%= booking.status.capitalize %></em></p>
-            <%= link_to booking_path(booking), method: :delete, data: { confirm: 'Are you sure you want to cancel?' } do %>
-            <br>
-              <i class="far fa-calendar-times"></i>
-            <% end %>
+            <%= link_to "Cancel", booking_path(booking), method: :delete, data: { confirm: 'Are you sure you want to cancel?' } %>
             <span> | </span>
-            <%= link_to "Update", edit_listing_booking_path(booking.listing, booking) %>
+            <%= link_to "Modify", edit_listing_booking_path(booking.listing, booking) %>
             <span> | </span>
             <%= link_to "Add Review", new_booking_review_path(booking) %>
           </div>
