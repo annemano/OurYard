@@ -42,7 +42,7 @@
         <div class="details_header_text">
           <h2>Yard details</h2>
           <p>Hosted by <%= @listing.user.first_name %></p>
-          <p id="price-hour-show-page">$ <%= @listing.price_per_hour %> / hour</p>
+          <p>$ <span id="price-hour-show-page"><%= @listing.price_per_hour %></span> / hour</p>
         </div>
         <div class="details_header_avatar">
           <%= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621440517/CchkFLfP_400x400_tf89lb.jpg", class: "avatar-large" %>
