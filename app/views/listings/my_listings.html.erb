@@ -16,7 +16,7 @@
         <% else %>
           <% listing.bookings.each do |booking| %>
             <div class="card-booking my-3">
-              <%= cl_image_tag booking.listing.photo.key %>
+              <%= cl_image_tag booking.listing.photos[0].key %>
               <div class="card-booking-infos p-3">
                 <p>Name: <%= booking.user.first_name %> <%= booking.user.last_name %></p>
                 <p>Total price: $ <%= (booking.end_date - booking.start_date) / 6000 * booking.listing.price_per_hour %> </p>
