@@ -23,7 +23,7 @@ class ListingsController < ApplicationController
     @user = current_user
     @listing.user = @user
     if @listing.save
-      redirect_to root_path
+      redirect_to listing_path(@listing)
     else
       render :new
     end
@@ -47,7 +47,7 @@ class ListingsController < ApplicationController
 
   def destroy
     @listing.destroy
-    redirect_to listings_path
+    redirect_to my_listings_path
   end
 
   def my_listings
