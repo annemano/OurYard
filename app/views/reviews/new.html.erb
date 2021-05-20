@@ -1,0 +1,6 @@
+<%= simple_form_for [@booking, @review] do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.input :booking, :as => :hidden, :input_html => { :value => "#{@booking}" } %>
+  <%= f.submit 'Save review', class: "btn btn-success"%>
+<% end %>

@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :listings do
     resources :bookings, only: [:create, :edit, :update]
   end
-  resources :bookings, only: [:index, :show, :destroy]
+
+  resources :bookings, only: [:index, :show, :destroy] do
+    resources :reviews, only: [:new, :create]
+  end
   get '/my_listings', to: 'listings#my_listings', as: 'my_listings'
   patch '/bookings/:id/confirm', to: 'bookings#confirm', as: 'booking_confirm'
   patch '/bookings/:id/reject', to: 'bookings#reject', as: 'booking_reject'
