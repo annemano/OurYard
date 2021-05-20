@@ -4,7 +4,7 @@
     <div class="col-9">
       <% current_user.bookings.each do |booking| %>
         <div class="card-booking my-3">
-          <%= cl_image_tag booking.listing.photo.key %>
+          <%= cl_image_tag booking.listing.photos[0].key %>
           <div class="card-booking-infos p-3">
             <h2><%= booking.listing.title %></h2>
             <p>Total price: $ <%= (booking.end_date - booking.start_date) / 6000 * booking.listing.price_per_hour %> </p>
