@@ -12,9 +12,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621440517/CchkFLfP_400x400_tf89lb.jpg", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621536617/Screen_Shot_2021-05-20_at_2.50.04_PM_golmvm.png", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Profile", "#", class: "dropdown-item" %>
+            <%= link_to "Profile", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
             <%= link_to "My Listings", my_listings_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
