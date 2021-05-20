@@ -26,11 +26,13 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @listing = @booking.listing
   end
 
   def update
     if @booking.update(booking_params)
-      redirect_to booking_path(@booking)
+      @booking.update(status: "pending")
+      redirect_to bookings_path
     else
       render :edit
     end
@@ -42,13 +44,13 @@ class BookingsController < ApplicationController
   end
 
   def confirm
-    @booking = Booking.find(params[:id]) # to be checked whether this is the right params
+    @booking = Booking.find(params[:id])
     @booking.update(status: "confirmed")
     redirect_to my_listings_path
   end
 
   def reject
-    @booking = Booking.find(params[:id]) # to be checked whether this is the right params
+    @booking = Booking.find(params[:id])
     @booking.update(status: "rejected")
     redirect_to my_listings_path
   end

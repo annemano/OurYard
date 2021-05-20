@@ -12,4 +12,11 @@ class Listing < ApplicationRecord
                                     too_long: "%{count} characters is the maximum allowed" }
   validates :title, length: { maximum: 60,
                               too_long: "%{count} characters is the maximum allowed" }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+                  against: [:address],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end
