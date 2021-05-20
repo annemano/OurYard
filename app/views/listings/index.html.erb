@@ -28,7 +28,7 @@
       <% @listings.each do |listing| %>
         <div class="card-listing mt-3">
           <div class="listing-img">
-            <%= cl_image_tag listing.photo.key, crop: :thumb %>
+            <%= cl_image_tag listing.photos[0].key, crop: :thumb %>
           </div>
           <div class="listing-text">
             <h2><%= listing.title %></h2>
