@@ -1,33 +1,33 @@
 <div class="main-container">
   <div class="container content-container my-3">
     <!-- Header -->
-    <div class="listings_header mb-3">
+    <div class="listings-header mb-3">
       <p>100+ yards available for your search</p>
-      <h1><strong>Yards in Montreal</strong></h1>
-<!--       <p>filters:</p>
- --></div>
-    <!--  -->
-
-    <!-- Build drop downs/interface for filtering results -->
-    <div class="listings_dropdowns">
+      <h2><strong>Yards in Montreal</strong></h2>
+      <p>filters:</p>
     </div>
+    <!-- Build drop downs/interface for filtering results -->
+    <div class="listings-dropdowns">
+    </div>
+    <!--  -->
     <!--  -->
 
     <!-- Cards -->
-    <div class="cards_listing_container">
+    <div class="cards-listing-container">
       <% @listings.each do |listing| %>
-        <div class="card_listing p-3 m-3">
-          <div class="listing_img">
+        <div class="card-listing mt-3">
+          <div class="listing-img">
             <%= cl_image_tag listing.photo.key, crop: :thumb %>
           </div>
-          <div class="listing_text">
+          <div class="listing-text">
             <h2><%= listing.title %></h2>
-            <p><%= listing.description %></p>
+            <p class="description"><%= listing.description %></p>
             <p><strong>Average rating: <%= listing.avg_rating %></strong></p>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
             <hr>
           </div>
-          <div class="listing_price">
-            <h3>$<%= listing.price_per_hour %>0/hour</h3>
+          <div class="listing-price">
+            <h5>$<%= listing.price_per_hour %>0/hour</h5>
           </div>
           <%= link_to "more info", listing_path(listing), class: 'btn btn-primary more-info-btn' %>
         </div>

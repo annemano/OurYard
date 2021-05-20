@@ -18,9 +18,11 @@
 html, body {
   height: 100%;
   h1, h2, h3, h4, h5 {
-    font-family: 'Roboto'
+    color: black;
+    font-family: 'Roboto';
   }
   p, a {
+    color: $gray;
     font-family: 'Open Sans';
   }
 }
@@ -28,10 +30,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.content {
+
+.page-content {
   flex: 1 0 auto;
-}
-.footer {
-  margin-top: 32px;
-  flex-shrink: 0;
 }
