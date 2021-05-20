@@ -7,11 +7,15 @@ const addTotalPriceToForm = () => {
     totalPrice.innerHTML = "";
     const startDateTime = new Date(startDate.value);
     const endDateTime = new Date(endDate.value);
-    console.log(startDateTime)
-    console.log(endDateTime)
     const hours = (endDateTime - startDateTime) / 3600000;
-    console.log(hours)
     totalPrice.innerHTML = `<p><strong>Total price: $${hours * hourlyPrice}</strong></p>`;
+    startDate.addEventListener("change", (event) => {
+    totalPrice.innerHTML = "";
+    const startDateTime = new Date(startDate.value);
+    const endDateTime = new Date(endDate.value);
+    const hours = (endDateTime - startDateTime) / 3600000;
+    totalPrice.innerHTML = `<p><strong>Total price: $${hours * hourlyPrice}</strong></p>`;
+    });
     });
   };
 
