@@ -14,7 +14,7 @@ const addTotalPriceToForm = () => {
     const startDateTime = new Date(startDate.value);
     const endDateTime = new Date(endDate.value);
     const hours = (endDateTime - startDateTime) / 3600000;
-    totalPrice.innerHTML = `<p><strong>Total price: $${hours * hourlyPrice}</strong></p>`;
+    totalPrice.innerHTML = `<strong>Total price: $${hours * hourlyPrice}</strong>`;
     });
     });
   };

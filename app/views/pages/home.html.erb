@@ -22,10 +22,15 @@
           <div>
             <h3><%= listing.title %></h3>
             <p class="description"><%= listing.description %></p>
-            <p class="rating"><%= "Average rating: #{listing.avg_rating}" %></p>
           </div>
           <div class="container d-flex justify-content-between p-0 mt-1">
-            <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+            <p class="rating">
+              <% if listing.avg_rating %>
+                <%= "Rating: #{listing.avg_rating}" %>
+              <% else %>
+                 <%= "New Yard!" %>
+              <% end %>
+            </p>
             <h5 class="home-card-pricing"><%= "$#{listing.price_per_hour}/hour" %></h5>
           </div>
         </div>

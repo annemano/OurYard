@@ -1,7 +1,6 @@
 require "open-uri"
 
 Listing.destroy_all
-Booking.destroy_all
 
 # Listings Seeds
 file1 = URI.open('https://images.unsplash.com/photo-1602537675897-1285bfbcd014?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1460&q=80')
