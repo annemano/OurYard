@@ -16,7 +16,7 @@
     <%= link_to listing_path(listing) do %>
       <div class="home-card rounded p-3">
         <% listing.photos.each do |photo| %>
-          <%= cl_image_tag(listing.photo.key, alt: "", crop: :thumb) %>
+          <%= cl_image_tag(listing.photos[0].key, alt: "", crop: :thumb) %>
         <% end %>
         <div class="home-card-infos p-2">
           <div>
