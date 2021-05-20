@@ -11,7 +11,18 @@
     </div>
     <!--  -->
     <!--  -->
-
+    <div class="w-50">
+      <%= form_tag listings_path, method: :get do %>
+        <div class="input-group-append">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Enter a location"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
     <!-- Cards -->
     <div class="cards-listing-container">
       <% @listings.each do |listing| %>
@@ -21,6 +32,7 @@
           </div>
           <div class="listing-text">
             <h2><%= listing.title %></h2>
+            <p class="address"><%= listing.address %></p>
             <p class="description"><%= listing.description %></p>
             <p><strong>Average rating: <%= listing.avg_rating %></strong></p>
             <p>⭐️⭐️⭐️⭐️⭐️</p>
@@ -34,6 +46,7 @@
       <% end %>
     </div>
   </div>
+  <!-- Map -->
   <div class="container map-container my-3 p-3">
     <div id="map"
          style="width: 100%; height: 100%;"
