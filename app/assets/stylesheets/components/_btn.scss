@@ -1,6 +1,16 @@
-.btn-create {
-  padding: 8px 32px;
-  border-radius: 16px;
-  color: white;
+.btn {
+  border: none;
   font-weight: bold;
+  color: white;
+  transition: 0.5s;
+}
+
+.btn-primary {
+  &:hover {
+    background-color: #027DCA;
+  }
+}
+
+.btn-listing {
+  font-size: 20px;
 }

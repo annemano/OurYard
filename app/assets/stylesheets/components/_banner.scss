@@ -4,29 +4,16 @@
   padding: 150px 0;
 }
 
-.banner h1 {
-  font-family: 'Roboto';
-  margin: 0;
+.banner h2 {
   color: white;
+  margin: 0;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
   font-weight: bold;
 }
 
 .banner p {
-  font-family: 'Open-Sans';
-  color: #DBDBDB;
+  color: #F0F9F3;
+  margin-bottom: 8px;
   font-size: 20px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-bottom: 8px;
-}
-
-.banner a {
-  font-weight: bold;
-  background-color: #0296F2;
-  padding: 8px 32px;
-  border-radius: 16px;
-  &:hover {
-    background-color: #014B7A;
-  }
 }

@@ -5,8 +5,25 @@
   justify-content: center;
   height: 8vh;
   padding: 0px 50px;
+  margin-top: 32px;
+  flex-shrink: 0;
   color: rgba(0,0,0,0.3);
 }
-.footer .fa-heart {
-  color: #D23333;
+
+.footer a{
+  color: black;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 0px 10px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 1;
+  }
 }
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
