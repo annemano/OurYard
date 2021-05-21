@@ -1,13 +1,22 @@
 .btn {
-  border: none;
   font-weight: bold;
-  color: white;
-  transition: 0.5s;
+  // color: #027DCA;
+  color: #027DCA;
+  background-color: white;
+  border: 1px solid lightgray;
+  transition: 0.2s;
+  &:hover {
+  border: 1px solid #027DCA;
+  color: #027DCA;
+  font-weight: bold;
+  }
 }
 
 .btn-primary {
   &:hover {
-    background-color: #027DCA;
+  border: 1px solid #027DCA;
+  color: #027DCA;
+  font-weight: bold;
   }
 }
 
