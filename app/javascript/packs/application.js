@@ -25,14 +25,15 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from '../plugins/init_flatpickr';
+import { loadDynamicBannerText } from '../components/banner';
 import { addTotalPriceToForm, addTotalPriceToEdit } from '../components/totalprice'
-
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
   initFlatpickr();
+  loadDynamicBannerText();
   addTotalPriceToForm();
   addTotalPriceToEdit();
 });
