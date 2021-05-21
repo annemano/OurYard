@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @listing = @booking.listing
     if @review.save
       modify_avg_rating(@listing)
-      redirect_to listing_path(@listing)
+      redirect_to listing_path(@listing, anchor: "review-#{@review.id}")
     else
       render :new
     end
