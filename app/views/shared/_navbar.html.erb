@@ -13,7 +13,7 @@
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
               <%= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621536617/Screen_Shot_2021-05-20_at_2.50.04_PM_golmvm.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>

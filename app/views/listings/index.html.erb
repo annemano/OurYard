@@ -1,60 +1,56 @@
-<div class="main-container">
-  <div class="container content-container my-3">
-    <!-- Header -->
-    <div class="listings-header mb-3">
-      <!-- <p>100+ yards available for your search</p> -->
+<!-- Header -->
+<div class="main-container header-container mt-3">
+  <div>
     <h1>Yards in Montreal</h1>
-
-    <div class="w-50">
+    <div class="">
       <%= form_tag listings_path, method: :get do %>
         <div class="input-group-append">
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Enter a location"
-          %>
+            placeholder: "Enter a location" %>
           <%= submit_tag "Search", class: 'btn' %>
         </div>
       <% end %>
     </div>
-    </div>
-    <!-- Build drop downs/interface for filtering results -->
+  </div>
+</div>
 
-    <!-- Cards -->
-    <div class="cards-listing-container">
-      <% @listings.each do |listing| %>
-        <div class="card-listing mt-3">
-          <div class="listing-img">
-            <%= cl_image_tag listing.photos[0].key, crop: :thumb %>
-          </div>
-          <div class="listing-text">
-            <h2><%= listing.title %></h2>
-            <p class="address"><%= listing.address %></p>
-            <p class="description"><%= listing.description %></p>
-            <p><strong>
-              <% if listing.avg_rating %>
-                <%= "Rating: #{listing.avg_rating}" %>
-              <% else %>
-                 <%= "New Yard!" %>
-              <% end %>
-              </strong></p>
-            <hr>
-          </div>
-          <div class="listing-price">
-            <h5>$<%= listing.price_per_hour %>0/hour</h5>
-          </div>
-          <%= link_to "more info", listing_path(listing), class: 'btn more-info-btn' %>
+
+<!-- Content and map -->
+<div class="main-container">
+  <!-- Cards -->
+  <div class="cards-container">
+    <% @listings.each do |listing| %>
+      <div class="card-listing mb-4">
+        <div class="listing-img">
+          <%= cl_image_tag listing.photos[0].key, crop: :thumb %>
         </div>
-      <% end %>
-    </div>
+        <div class="listing-text">
+          <h2><%= listing.title %></h2>
+          <p class="address"><%= listing.address %></p>
+          <p class="description"><%= listing.description %></p>
+          <p><strong>
+            <% if listing.avg_rating %>
+              <%= "Rating: #{listing.avg_rating}" %>
+            <% else %>
+               <%= "New Yard!" %>
+            <% end %>
+            </strong></p>
+          <hr>
+        </div>
+        <div class="listing-price">
+          <h5>$<%= listing.price_per_hour %>0/hour</h5>
+        </div>
+        <%= link_to "more info", listing_path(listing), class: 'btn more-info-btn' %>
+      </div>
+    <% end %>
   </div>
   <!-- Map -->
-<!--   <div class="container map-container my-3 p-3">
- -->    <div id="map"
-         class= "m-3 p-3"
-         style="width: 50vw; height: 100vh; position: sticky; top: 0;"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-<!--     </div>
- -->  </div>
+  <div id="map"
+       class= "map mt-4"
+       style="width: 50%; height: 100vh; position: sticky; top: 0; box-shadow: 3px 3px 5px rgba(0,0,0,0.2); margin-bottom: 52px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
