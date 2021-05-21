@@ -25,7 +25,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from '../plugins/init_flatpickr';
-import { addTotalPriceToForm } from '../components/totalprice'
+import { addTotalPriceToForm, addTotalPriceToEdit } from '../components/totalprice'
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -34,5 +34,6 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initFlatpickr();
   addTotalPriceToForm();
+  addTotalPriceToEdit();
 });
 
