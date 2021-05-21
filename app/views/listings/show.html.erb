@@ -82,3 +82,31 @@
   </div>
 
 </div>
+
+<hr>
+<div class="container">
+  <% if @listing.reviews.blank? %>
+    <h3>No reviews yet for <%= @listing.title %></h3>
+  <% else %>
+    <h2>Reviews (Average Rating: <%= @listing.avg_rating %>)</h2>
+    <% @listing.reviews.each do |review| %>
+      <div class="card my-3" id="review-<%= review.id %>">
+        <div class="card-header">
+          <% review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <% if review.comment.nil? %>
+              <p><em>No comment left.</em></p>
+            <% else %>
+              <p><%= review.comment %></p>
+            <% end %>
+            <footer class="blockquote-footer"><%= review.booking.user.first_name %></footer>
+          </blockquote>
+        </div>
+      </div>
+     <% end %>
+  <% end %>
+</div>
