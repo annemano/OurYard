@@ -26,6 +26,8 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from '../plugins/init_flatpickr';
 import { addTotalPriceToForm } from '../components/totalprice'
+import { loadDynamicBannerText } from '../components/banner';
+
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -33,6 +35,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initFlatpickr();
+  loadDynamicBannerText();
   addTotalPriceToForm();
 });
 
