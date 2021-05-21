@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="listings-header mb-3">
       <!-- <p>100+ yards available for your search</p> -->
-    <h1>Yards in Montreal</h1>
+    <h1>Yards in Your Area</h1>
 
     <div class="w-50">
       <%= form_tag listings_path, method: :get do %>
@@ -13,7 +13,7 @@
             class: "form-control",
             placeholder: "Enter a location"
           %>
-          <%= submit_tag "Search", class: 'btn' %>
+          <%= submit_tag "Search", class: 'btn mx-2' %>
         </div>
       <% end %>
     </div>
