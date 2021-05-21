@@ -6,9 +6,10 @@
         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :occupancy, label: "Number of guests" %>
+
         <span class="d-none" id="price-hour-edit-page"><%= @listing.price_per_hour %></span>
         <p id="total-price-edit-page"></p>
-        <%= f.button :submit, "Send modification request", class: "btn btn-primary" %>
+        <%= f.button :submit, "Send modification request", class: "btn" %>
       <% end %>
     </div>
   </div>
