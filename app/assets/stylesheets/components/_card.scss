@@ -1,11 +1,11 @@
 .home-card-container {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: space-around;
   a {
     text-decoration: none;
-    margin-top: 16px;
-    width: 20%;
+    margin: 16px 8px;
+    width: 29%;
     overflow: hidden;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);

@@ -3,14 +3,21 @@
   <div class="container">
     <h2>OurYard brings you the perfect outdoor space, no matter the occasion.</h2>
     <p>Reserve your yard now.</p>
-    <%= link_to "Explore", listings_path, class: "btn btn-primary px-5 py-2" %>
+    <%= link_to "Explore", listings_path, class: "btn px-5 py-2" %>
   </div>
 </div>
-<div class="text-center">
+<!-- <div class="text-center">
   <%= link_to 'Create a new listing', new_listing_path, class: 'btn btn-success btn-listing px-3 py-2 m-3' %>
+</div> -->
+
+<!-- Mock up header for lower cards -->
+<div class="d-flex justify-content-between align-items-end p-0 mt-1 mx-5">
+  <h3>Our top picks:</h3>
+  <%= link_to 'Create a new listing', new_listing_path, class: 'btn px-3 py-2 m-3' %>
 </div>
 <!-- Cards -->
-<h3 class="top mx-5">Our top 3 picks for you!</h3>
+<!-- <h3 class="top mx-5">Our top 3 picks for you!</h3> -->
+
 <div class="home-card-container">
   <% @listings.each do |listing| %>
     <%= link_to listing_path(listing) do %>
