@@ -45,7 +45,8 @@
           <p>$ <span id="price-hour-show-page"><%= @listing.price_per_hour %></span> / hour</p>
         </div>
         <div class="details_header_avatar">
-          <%= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621440517/CchkFLfP_400x400_tf89lb.jpg", class: "avatar-large" %>
+          <%#= image_tag "https://res.cloudinary.com/dp6jmvq0j/image/upload/v1621440517/CchkFLfP_400x400_tf89lb.jpg", class: "avatar-large" %>
+          <%= cl_image_tag @listing.user.photo.key, class: "avatar-large" %>
         </div>
       </div>
       <hr>
