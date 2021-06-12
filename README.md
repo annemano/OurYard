@@ -15,4 +15,7 @@ Some of the main work I've done on the app:
 - Review system for owner to rate bookers
 - Review logic so that a review can only be left after stay
 
-(Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.)
+[Deployed on Heroku](https://ouryard.herokuapp.com/)
+
+
+*(Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.)*
